@@ -23,7 +23,7 @@ function MyPage() {
       <button
         onClick={async () => {
           await updateUserName({ name })
-          await client.invalidateQueries([key])
+          await invalidateQuery(getUser)
         }}
       >
         Enviar
